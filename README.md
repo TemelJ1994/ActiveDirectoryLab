@@ -43,14 +43,23 @@ Give default administrator account a password and login: <br/>
 <p align="center">
 Setup Ipv4 Addressing for the internal network:  <br/>
 <img src="assign_ip.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+- Here I assign an ip address to the internal NIC <br />
+- The domain controller will serve as the default gateway so its empty <br />
+- The server itself will act as a DNS server because active directory will install DNS
 <br />
 <br />
-Install Active direcory Domain services and create domain:  <br/>
+<p align="center">
+Install Active directory Domain services and create domain:  <br/>
 <img src="servermanager.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="install_roles.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="install_ADservices.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+- Here I installed Active directory by clicking add role in server manager and checking the box named Active Directory Domain service
 <br />
 <br />
+<p align="center">
 Process takes time to complete:  <br/>
 <img src="install_ADservices_progress.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -58,8 +67,12 @@ Process takes time to complete:  <br/>
 Post deployment configuration promote server:  <br/>
 <img src="promote_server_domain1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="promote_server_domain2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+- After Active Directory is installed post deployment configuration needs to be done to promote the server to the domain controller <br />
 <br />
 <br />
+<p align="center">
 Create an Organzational Unit in Active directory users and computers :  <br/>
 <img src="OU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -114,14 +127,33 @@ Open AD users and computers to check creation of users:  <br/>
 <br />
 <br />
 Create new client VM change network settings to internal network:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="create_win10client.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> 
+<img src="client1_NATadapter.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="create_client1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Create Windows 10 virtual client and configure Internet access:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Sign in to user that was created in active directory:  <br/>
+<img src="signin_to_created_user.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+<p align="center">
+Check client1 network details:  <br/>
+<img src="ping_from_client1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+<br />
+- I opened the command prompt on the client machine and used the ip config command to inspect network details <br />
+- Used the ping command to check if the DNS server is working and to get an echo reply <br />
+- This means are client computer has connectivity to the default gateway which is the domain controller <br />
+- The domain controller is properly fowarding that connection out to the internet and back
+<br />
+<br />
+<p align="center">
+Rename client PC and join domain:  <br/>
+<img src="rename_clientpc_joinDomain.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="change_clientname_joinDomain.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
 
 <!--
  ```diff
