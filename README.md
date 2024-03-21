@@ -25,7 +25,7 @@ This project consist of me setting a basic home lab running Active Directory wit
 Setup virtual box and create Domain Controller VM: <br/>
 <img src="create_DC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-- created a domain controller to have 2 NICs, one for the internet and another for the internal network
+- I created a domain controller to have 2 NICs, one for the internet and another for the internal network
 <br />
 <br />
 <p align="center">
