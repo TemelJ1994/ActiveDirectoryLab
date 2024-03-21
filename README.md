@@ -29,7 +29,7 @@ In this lab I will get experience using Active directory, PowerShell, Windows Se
 <img src="enable_NAT_internet.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="enable_internal.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-- First was to create domain controller. So I needed my VM to have two NICs, one for the internet and another for the internal network to emulate some sort of corporate enviorment
+-First was to create domain controller. So I needed my VM to have two NICs, one for the internet and another for the internal network to emulate some sort of corporate enviorment
 <br />
 <br />
 <p align="center">
